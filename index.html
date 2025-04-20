@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Jailbreaks.app</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .lang-selector {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      gap: 10px;
+      z-index: 1000;
+    }
+    .lang-selector button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      transition: transform 0.2s ease;
+    }
+    .lang-selector button:hover {
+      transform: scale(1.1);
+    }
+    .lang-selector img {
+      width: 24px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="lang-selector">
+    <button onclick="changeLanguage('en')" title="English"><img src="https://flagcdn.com/gb.svg" alt="EN"></button>
+    <button onclick="changeLanguage('ru')" title="Русский"><img src="https://flagcdn.com/ru.svg" alt="RU"></button>
+    <button onclick="changeLanguage('uk')" title="Українська"><img src="https://flagcdn.com/ua.svg" alt="UA"></button>
+  </div>
+
+  <div class="section">
+    <h1 data-lang-en="Jailbreaks.app" data-lang-ru="Jailbreaks.сайт" data-lang-uk="Jailbreaks.додаток">Jailbreak Platform</h1>
+    <div class="subheading" data-lang-en="Your favourite jailbreak apps in one place" data-lang-ru="Ваши любимые джеилбрейк программы в одном месте" data-lang-uk="Ваші улюблені джейлбрейк програми в одному місці">Your favourite jailbreak apps in one place</div>
+    <ul>
+      <!-- <li><a href="#" data-lang-en="Install daibutsu (iOS 8.4.1)" data-lang-ru="Установить daibutsu (iOS 8.4.1)" data-lang-uk="Встановити daibutsu (iOS 8.4.1)">Install daibutsu (iOS 8.4.1)</a></li>
+      <li><a href="#" data-lang-en="Install Home Depot (iOS 8.4.1 - 9.3.4)" data-lang-ru="Установить Home Depot (iOS 8.4.1 - 9.3.4)" data-lang-uk="Встановити Home Depot (iOS 8.4.1 - 9.3.4)">Install Home Depot (iOS 8.4.1 - 9.3.4)</a></li>
+      <li><a href="#" data-lang-en="Install p0laris (iOS 9)" data-lang-ru="Установить p0laris (iOS 9)" data-lang-uk="Встановити p0laris (iOS 9)">Install p0laris (iOS 9)</a></li>
+      <li><a href="#" data-lang-en="Install openpwnage (iOS 9)" data-lang-ru="Установить openpwnage (iOS 9)" data-lang-uk="Встановити openpwnage (iOS 9)">Install openpwnage (iOS 9)</a></li> -->
+      <li><a href="files/phoneix/Phoenix6.ipa" download data-lang-en="Install Phoenix (iOS 9.3.5 - 9.3.6)" data-lang-ru="Установить Phoenix (iOS 9.3.5 - 9.3.6)" data-lang-uk="Встановити Phoenix (iOS 9.3.5 - 9.3.6)">Install Phoenix (iOS 9.3.5 - 9.3.6)</a></li>
+      <li><a href="files/checkra1n/beta_0.12.4.dmg" download data-lang-en="Install Checkra1n (iOS 12x - 14x)" data-lang-ru="Установить Checkra1n (iOS 12x - 14x)" data-lang-uk="Встановити Checkra1n (iOS 12x - 14x)">Install Checkra1n (iOS 12x - 14x)</a></li>
+      <!-- <li><a href="#" data-lang-en="Install kok3shii9 (32 bit)" data-lang-ru="Установить kok3shii9 (32 бит)" data-lang-uk="Встановити kok3shii9 (32 біти)">Install kok3shii9 (32 bit)</a></li>
+      <li><a href="#" data-lang-en="Install kok3shii9 (64 bit)" data-lang-ru="Установить kok3shii9 (64 бит)" data-lang-uk="Встановити kok3shii9 (64 біти)">Install kok3shii9 (64 bit)</a></li>
+      <li><a href="#" data-lang-en="Install Socket (iOS 10.3.X)" data-lang-ru="Установить Socket (iOS 10.3.X)" data-lang-uk="Встановити Socket (iOS 10.3.X)">Install Socket (iOS 10.3.X)</a></li> -->
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2 data-lang-en="Contact/Support" data-lang-ru="Контакты/Поддержка" data-lang-uk="Контакти/Підтримка">Contact/Support</h2>
+    <ul>
+      <li><a href="#" class="gradient-text">Youtube</a></li>
+      <!-- <li><a href="#" class="gradient-text">Jaidan's Twitter</a></li>
+      <li><a href="#" class="gradient-text">Jailbreaks.app Twitter</a></li>
+      <li><a href="#" class="gradient-text">Discord</a></li>
+      <li><a href="#" class="gradient-text">Donate (PayPal)</a></li> -->
+    </ul>
+  </div>
+
+  <script>
+    function changeLanguage(lang) {
+      document.querySelectorAll('[data-lang-en]').forEach(el => {
+        el.textContent = el.getAttribute(`data-lang-${lang}`);
+      });
+    }
+  </script>
+
+</body>
+</html>
