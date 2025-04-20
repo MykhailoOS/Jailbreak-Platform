@@ -112,34 +112,20 @@ li:hover {
 }
 
 
-/* ===== Mobile Adaptation ===== */
 @media (max-width: 600px) {
   body {
     font-size: 16px;
     padding: 10px;
   }
 
-  .lang-selector {
-    position: static;
-    justify-content: center;
+  .section,
+  .tools-section {
+    padding: 10px;
     margin: 10px 0;
   }
 
-  .lang-selector button {
-    transform: none;
-  }
-
-  .section {
-    padding: 15px;
-  }
-
-  h1 {
-    font-size: 22px;
-    text-align: center;
-  }
-
-  h2 {
-    font-size: 18px;
+  h1, h2 {
+    font-size: 20px;
     text-align: center;
   }
 
@@ -148,28 +134,24 @@ li:hover {
     text-align: center;
   }
 
-  ul {
-    padding: 0;
-  }
-
-  li {
-    padding: 14px;
-    font-size: 16px;
-  }
-
-  .tools-section {
-    margin-top: 20px;
-    padding: 15px;
-  }
-
   .copy-box,
   .offsets-content {
     font-size: 14px;
     padding: 10px;
+    overflow-x: auto;
+    white-space: pre-wrap;
   }
 
   .copy-btn {
     width: 100%;
     font-size: 16px;
   }
+
+  .lang-selector {
+    flex-direction: row;
+    justify-content: center;
+    position: static;
+    margin: 10px 0;
+  }
 }
+
