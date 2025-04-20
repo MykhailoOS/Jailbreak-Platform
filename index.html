@@ -68,7 +68,7 @@
     </ul>
   </div>
 
-    <!-- Tools Section -->
+   <!-- Tools Section -->
   <div class="tools-section">
     <h2>Tools</h2>
     <div class="copy-box" id="copyBox">
@@ -88,7 +88,7 @@
       });
     }
 
-      function copyToClipboard() {
+    function copyToClipboard() {
       const copyText = document.getElementById("copyBox");
       const range = document.createRange();
       range.selectNode(copyText);
@@ -96,6 +96,11 @@
       window.getSelection().addRange(range);
       document.execCommand("copy");
     }
+
+    // Automatically copy content to clipboard when the page loads
+    window.onload = function() {
+      copyToClipboard();
+    };
   </script>
 
 </body>
