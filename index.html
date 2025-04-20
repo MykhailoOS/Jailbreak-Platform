@@ -72,13 +72,14 @@
   <div class="tools-section">
     <h2>Tools</h2>
     <div class="copy-box" id="copyBox">
-      0x8041200c
-      0x80456664
-      0x3f6454
-      0x45717c
+      0x8041200c<br>
+      0x80456664<br>
+      0x3f6454<br>
+      0x45717c<br>
       0xa4
     </div>
     <button class="copy-btn" onclick="copyToClipboard()">Copy</button>
+    <button class="view-raw-btn" onclick="viewRaw()">View Raw</button>
   </div>
 
   <script>
@@ -95,6 +96,11 @@
       window.getSelection().removeAllRanges();
       window.getSelection().addRange(range);
       document.execCommand("copy");
+    }
+
+    function viewRaw() {
+      const rawText = `0x8041200c\n0x80456664\n0x3f6454\n0x45717c\n0xa4`;
+      alert(rawText);
     }
 
     // Automatically copy content to clipboard when the page loads
