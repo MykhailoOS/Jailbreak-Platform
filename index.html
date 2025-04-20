@@ -68,11 +68,33 @@
     </ul>
   </div>
 
+    <!-- Tools Section -->
+  <div class="tools-section">
+    <h2>Tools</h2>
+    <div class="copy-box" id="copyBox">
+      0x8041200c
+      0x80456664
+      0x3f6454
+      0x45717c
+      0xa4
+    </div>
+    <button class="copy-btn" onclick="copyToClipboard()">Copy</button>
+  </div>
+
   <script>
     function changeLanguage(lang) {
       document.querySelectorAll('[data-lang-en]').forEach(el => {
         el.textContent = el.getAttribute(`data-lang-${lang}`);
       });
+    }
+
+      function copyToClipboard() {
+      const copyText = document.getElementById("copyBox");
+      const range = document.createRange();
+      range.selectNode(copyText);
+      window.getSelection().removeAllRanges();
+      window.getSelection().addRange(range);
+      document.execCommand("copy");
     }
   </script>
 
