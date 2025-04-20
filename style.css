@@ -73,4 +73,42 @@ li:hover {
   }
 }
 
+.tools-section {
+  padding: 20px;
+  background-color: #2b2b2e;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.tools-section h2 {
+  font-size: 20px;
+}
+
+.copy-box {
+  background-color: #333;
+  padding: 10px;
+  border-radius: 5px;
+  color: #f1f1f1;
+  font-family: monospace;
+  font-size: 16px;
+  overflow-x: auto;
+  margin-top: 10px;
+  white-space: pre;
+}
+
+.copy-btn {
+  background-color: #40c9ff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.copy-btn:hover {
+  background-color: #3296c3;
+}
+
 
